@@ -582,6 +582,11 @@
                     });
                 }
             }
+            
+            if (this.container.outerHeight() + this.container.offset().top > $(window).height())
+              this.container.css({
+                top: $(window).height() - this.container.outerHeight() - parentOffset.top
+              });
         },
 
         toggle: function (e) {
